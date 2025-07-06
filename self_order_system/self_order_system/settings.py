@@ -129,3 +129,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
+
+# 画像をアップロードするための設定
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
