@@ -5,5 +5,9 @@
 {% block title %}h1タグ内のタイトル{% endblock %}
 
 {% block content %}
-<p>divタグ内のコンテンツ</p>
+<p>テーブル番号を選んで[次へ]を押してください</p>
+<form action="{% url 'index' %}" method="post">
+  {% csrf_token %}
+  {% include 'form.html' with submit_text="次へ" %}
+</form>
 {% endblock %}
